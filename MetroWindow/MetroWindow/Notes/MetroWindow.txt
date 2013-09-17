@@ -1,0 +1,10 @@
+﻿title - font and color
+border brush
+border trigger - where to keep
+WindowNonClientFrameThickness
+MouseDown="SystemMenuIcon_MouseDown" - http://stackoverflow.com/questions/6131684/replicating-standard-system-menu-with-windowchrome
+ardonerDEcorator - what's the need
+Chrome - aero and all
+Resize grip
+Button - commands
+Button - style
