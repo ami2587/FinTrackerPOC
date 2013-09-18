@@ -1,0 +1,11 @@
+dp for border brush colors
+colors
+title font and size
+Foreground
+
+Aero stuff
+WindowNonClientFrameThickness
+ResizeGrip
+
+
+where to define the style and how to use

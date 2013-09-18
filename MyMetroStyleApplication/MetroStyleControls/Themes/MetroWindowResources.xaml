@@ -1,16 +1,11 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:MetroWindowApp">
-
-    <Style x:Key="MetroWindowStyle" TargetType="local:MetroWindow">
-        <Setter Property="WindowChrome.WindowChrome">
-            <Setter.Value>
-                <WindowChrome />
-            </Setter.Value>
-        </Setter>
+                    xmlns:local="clr-namespace:MetroStyleControls">
+    
+    <Style TargetType="{x:Type local:MetroWindow}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="local:MetroWindow">
+                <ControlTemplate TargetType="{x:Type local:MetroWindow}">
                     <Border x:Name="WindowBorder" 
                             BorderThickness="1"
                             BorderBrush="Blue">
@@ -64,6 +59,10 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        <Setter Property="WindowChrome.WindowChrome">
+            <Setter.Value>
+                <WindowChrome />
+            </Setter.Value>
+        </Setter>
     </Style>
-    
 </ResourceDictionary>

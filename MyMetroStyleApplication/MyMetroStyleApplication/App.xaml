@@ -1,8 +1,8 @@
-﻿<Application x:Class="MetroWindow.App"
+﻿<Application x:Class="MyMetroStyleApplication.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <ResourceDictionary Source="Resources/Controls.xaml"/>
+        <!--<ResourceDictionary Source="pack://application:,,,/MetroStyleControls;component/Themes/Generic.xaml"/>-->
     </Application.Resources>
 </Application>

@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MetroStyleControls;
 
-namespace MetroWindowApp
+namespace MyMetroStyleApplication
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,7 +24,6 @@ namespace MetroWindowApp
         public MainWindow()
         {
             InitializeComponent();
-            //this.WindowState = System.Windows.WindowState.Maximized;
         }
     }
 }

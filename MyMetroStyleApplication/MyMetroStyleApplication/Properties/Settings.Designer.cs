@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MetroWindow.Properties
+namespace MyMetroStyleApplication.Properties
 {
 
 

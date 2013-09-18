@@ -1,0 +1,128 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:MetroStyleControls">
+    
+    <!--<ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="..\Resources\MetroWindowResources.xaml"/>   
+    </ResourceDictionary.MergedDictionaries>-->
+
+    <Color x:Key="WindowBackgroundColor">White</Color>
+    <Color x:Key="ActiveWindowBorderColor">Blue</Color>
+    <Color x:Key="InactiveWindowBorderColor">#FF0C0C83</Color>
+    <Color x:Key="WindowTitleColor">#FF544E4E</Color>
+    <!--<Color x:Key="HighlightColor">#FF3F3F41</Color>
+    <Color x:Key="BlueColor">#FF007ACC</Color>
+    <Color x:Key="ForegroundColor">#FFF4F4F5</Color>-->
+
+    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{StaticResource WindowBackgroundColor}"/>
+    <SolidColorBrush x:Key="ActiveWindowBorderBrush" Color="{StaticResource ActiveWindowBorderColor}"/>
+    <SolidColorBrush x:Key="InactiveWindowBorderBrush" Color="{StaticResource InactiveWindowBorderColor}"/>
+    <SolidColorBrush x:Key="WindowTitleBrush" Color="{StaticResource WindowTitleColor}"/>
+    <!--<SolidColorBrush x:Key="HighlightColorBrush" Color="{StaticResource HighlightColor}"/>
+    <SolidColorBrush x:Key="BlueColorBrush" Color="{StaticResource BlueColor}"/>
+    <SolidColorBrush x:Key="ForegroundColorBrush" Color="{StaticResource ForegroundColor}"/>-->
+    
+    <Style x:Key="WindowButtonStyle" 
+           TargetType="Button">
+        <Setter Property="Background"
+                Value="Transparent"/>
+        <Setter Property="VerticalContentAlignment"
+                Value="Center"/>
+        <Setter Property="HorizontalContentAlignment"
+                Value="Center"/>
+        <Setter Property="Padding"
+                Value="5"/>
+        <Setter Property="FontFamily"
+                Value="Marlett"/>
+        <Setter Property="BorderThickness"
+                Value="0"/>
+    </Style>
+    
+    <Style TargetType="{x:Type local:MetroWindow}">
+        
+        <!-- Set the default background color -->
+        <Setter Property="Background"
+                Value="{StaticResource WindowBackgroundBrush}"/>
+        
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MetroWindow}">
+                    <Border x:Name="WindowBorder" 
+                            BorderThickness="1"
+                            BorderBrush="{StaticResource InactiveWindowBorderBrush}">
+                        <Border Background="{TemplateBinding Background}">
+                            <Grid x:Name="LayoutRoot">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <DockPanel Margin="5">
+                                    <StackPanel DockPanel.Dock="Left"
+                                                Orientation="Horizontal">
+                                        <Image Source="{TemplateBinding Icon}"
+                                               Height="15"
+                                               VerticalAlignment="Center"/>
+                                        <TextBlock Margin="7,0,0,0" 
+                                                   VerticalAlignment="Center"
+                                                   Text="{TemplateBinding Title}"
+                                                   FontSize="16"
+                                                   Foreground="{StaticResource WindowTitleBrush}"/>
+                                    </StackPanel>
+                                    <StackPanel DockPanel.Dock="Right"
+                                                Orientation="Horizontal"
+                                                HorizontalAlignment="Right"
+                                                WindowChrome.IsHitTestVisibleInChrome="True">
+                                        <Button Command="{Binding Source={x:Static SystemCommands.MinimizeWindowCommand}}" 
+                                                ToolTip="Minimize"
+                                                Style="{StaticResource WindowButtonStyle}">
+                                            <TextBlock Text="0"/> <!-- Minimize icon in Marlett-->
+                                        </Button>
+                                        <Button x:Name="RestoreButton" 
+                                                Command="{Binding Source={x:Static SystemCommands.RestoreWindowCommand}}" 
+                                                ToolTip="Restore"
+                                                Style="{StaticResource WindowButtonStyle}">
+                                            <TextBlock Text="2"/> <!-- Restore icon in Marlett-->
+                                        </Button>
+                                        <Button x:Name="MaximizeButton"
+                                                Command="{Binding Source={x:Static SystemCommands.MaximizeWindowCommand}}" 
+                                                ToolTip="Maximize"
+                                                Style="{StaticResource WindowButtonStyle}">
+                                            <TextBlock Text="1"/> <!-- Maximize icon in Marlett-->
+                                        </Button>
+                                        <Button Command="{Binding Source={x:Static SystemCommands.CloseWindowCommand}}" 
+                                                ToolTip="Close"
+                                                Style="{StaticResource WindowButtonStyle}">
+                                            <TextBlock Text="r"/> <!-- Close icon in Marlett-->
+                                        </Button>
+                                    </StackPanel>
+                                </DockPanel>
+                                <ContentPresenter Grid.Row="1"
+                                                  Margin="10"/>
+                            </Grid>
+                        </Border>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="WindowState" Value="Maximized">
+                            <Setter TargetName="MaximizeButton" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="LayoutRoot" Property="Margin" Value="10" />
+                        </Trigger>
+                        <Trigger Property="WindowState" Value="Normal">
+                            <Setter TargetName="RestoreButton" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="IsActive" Value="True">
+                            <Setter TargetName="WindowBorder" 
+                                    Property="BorderBrush" 
+                                    Value="{StaticResource ActiveWindowBorderBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="WindowChrome.WindowChrome">
+            <Setter.Value>
+                <WindowChrome />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

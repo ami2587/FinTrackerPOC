@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMetroStyleApplication", "MyMetroStyleApplication\MyMetroStyleApplication.csproj", "{43DFEBB3-C1E9-449A-8D0C-FF3834639D9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroStyleControls", "MetroStyleControls\MetroStyleControls.csproj", "{E33AACF6-B827-445B-AFF3-C54E6739575C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCustomControlLibrary1", "WpfCustomControlLibrary1\WpfCustomControlLibrary1.csproj", "{7305070D-3208-4FB8-990B-12FCAC27475D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43DFEBB3-C1E9-449A-8D0C-FF3834639D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43DFEBB3-C1E9-449A-8D0C-FF3834639D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43DFEBB3-C1E9-449A-8D0C-FF3834639D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43DFEBB3-C1E9-449A-8D0C-FF3834639D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E33AACF6-B827-445B-AFF3-C54E6739575C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E33AACF6-B827-445B-AFF3-C54E6739575C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E33AACF6-B827-445B-AFF3-C54E6739575C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E33AACF6-B827-445B-AFF3-C54E6739575C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7305070D-3208-4FB8-990B-12FCAC27475D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7305070D-3208-4FB8-990B-12FCAC27475D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7305070D-3208-4FB8-990B-12FCAC27475D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7305070D-3208-4FB8-990B-12FCAC27475D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
