@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MetroStyleControls;
+using CommonControls;
 
 namespace MyMetroStyleApplication
 {
@@ -23,7 +24,11 @@ namespace MyMetroStyleApplication
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();            
+            //CommonControls.WatermarkTextBox wtb = new WatermarkTextBox();            
+            //wtb.Watermark = "type here";
+            //(LogicalTreeHelper.GetChildren(this).Cast<DockPanel>().First() as DockPanel).Children.Add(wtb);
+            //this.AddChild(new Login());
         }
     }
 }

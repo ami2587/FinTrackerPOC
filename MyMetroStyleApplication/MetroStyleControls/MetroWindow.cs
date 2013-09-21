@@ -25,7 +25,7 @@ namespace MetroStyleControls
 
         private void CanMinimizeWindow(object sender, CanExecuteRoutedEventArgs e)
         {
-            e.CanExecute = this.ResizeMode == ResizeMode.CanResize;
+            e.CanExecute = this.ResizeMode != ResizeMode.NoResize;
         }
 
         private void OnCloseWindow(object target, ExecutedRoutedEventArgs e)

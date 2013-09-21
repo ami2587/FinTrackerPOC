@@ -3,6 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <!--<ResourceDictionary Source="pack://application:,,,/MetroStyleControls;component/Themes/Generic.xaml"/>-->
+
+        <Color x:Key="ForegroundColor">#FF666464</Color>
+        <SolidColorBrush x:Key="ForegroundColorBrush" Color="{StaticResource ForegroundColor}"/>
+
+        <Color x:Key="ThemeColor1">#FF5BA75B</Color>
+        <SolidColorBrush x:Key="ThemeColor1Brush" Color="{StaticResource ThemeColor1}"/>
+
+        <Color x:Key="ThemeColor2">#FF5D949D</Color>
+        <SolidColorBrush x:Key="ThemeColor2Brush" Color="{StaticResource ThemeColor2}"/>
+        
+        <Style TargetType="TextBox">
+            <Setter Property="Foreground" Value="{StaticResource ForegroundColorBrush}"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="DefaultTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource ForegroundColorBrush}"/>
+        </Style>
+        
+        <Style TargetType="TextBlock" BasedOn="{StaticResource DefaultTextBlockStyle}"/>
+        
+        <Style x:Key="HeaderTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource ThemeColor2Brush}"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        
+        <Style TargetType="PasswordBox">
+            <Setter Property="Foreground" Value="{StaticResource ForegroundColorBrush}"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="PasswordChar" Value="*"/>
+        </Style>               
+
     </Application.Resources>
 </Application>
