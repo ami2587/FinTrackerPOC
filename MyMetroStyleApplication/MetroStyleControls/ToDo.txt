@@ -31,4 +31,5 @@ General
 
 Blockers
 	1) Problem using user controls etc.
+	2) Finalize approch for watermarking in username and password TextBox
 
