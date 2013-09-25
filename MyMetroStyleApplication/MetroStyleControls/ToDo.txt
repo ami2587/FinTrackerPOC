@@ -1,11 +1,34 @@
-dp for border brush colors
-colors
-title font and size
-Foreground
+MetroWindow
 
-Aero stuff
-WindowNonClientFrameThickness
-ResizeGrip
+	Testing
+		1) Maximize, Restore, Minimize, Close - via keyboard n mouse, shortcuts etc.
+		2) Resize behavior
+			ResizeGrip object not added and also those dots in lower right corner
+		3) General functionalities of a Window
+		4) AdornerDecorator not used - does it have any impact
+		5) Aero theme changes
+	Design - To Discuss
+		1) Minimum Window size
+		2) Default Window size
+		3) Need something on rigt hand side on the login page
+		4) Proportion of space on either side of the login user control
+		5) Keep the background on all the views, using a border with transparent white background - even though it goes against the idea of the minimalistic view
+		6) To we need a ribbon kind of thing or menu of some sort
+		7) Basic idea of all the views and navigation
+		8) Title font and size
+		9) Foreground font and size
+		10) Colors
+		11) Dependency properties in metro window to make various things configurable		
 
+General
+	1) Restructure the code and clean up - to do on my part
+	2) Where to define the styles and other resources
+ 	3) The icon used is picked up from some other application, need a new one
+	4) Designing of the app name
+	5) Localization support for strings
+	6) Modules - are these modules in general usage of the term or PRISM modules
+	7) Purpose of transaction module - need an understanding of this
 
-where to define the style and how to use
+Blockers
+	1) Problem using user controls etc.
+
