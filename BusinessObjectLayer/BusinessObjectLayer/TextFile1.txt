@@ -1,0 +1,13 @@
+﻿Parent in BusinessObjectBase - lazy loading
+Construction pattern
+http://tsells.wordpress.com/2011/02/08/using-reflection-with-wpf-and-the-inotifypropertychanged-interface/ - property changed hard coded strings
+
+Database structure and how to read the data
+how to generate id
+
+structure for the code
+that association thing
+
+business rules
+
+deletion - mark for database
